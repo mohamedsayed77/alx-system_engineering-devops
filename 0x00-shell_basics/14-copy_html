@@ -1,2 +1,2 @@
-#!/bin/bass
+#!/bin/bash
 cp -un *.html ../
