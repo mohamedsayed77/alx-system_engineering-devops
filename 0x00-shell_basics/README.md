@@ -13,4 +13,5 @@ And hidden files (starting with .)
 The file betty is in /tmp/my_first_directory"
 "rm -r /tmp/my_first_directory" Delete the directory my_first_directory that is in the /tmp directory"
 cd -  Write a script that changes the working directory to the previous one
-ls -la . /boot lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.
+ls -la . /boot lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format
+type  prints the type of the file named iamafile.
