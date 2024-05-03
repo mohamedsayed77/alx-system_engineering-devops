@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# loops from 1 to 10 and displays :
+# "bad luck" in the 4th iteration
+# "good luck" in the 8th iteration
+# "best school" in the other iteration 
+
+count=0
+
+while [ $count -le 20 ]
+do
+    echo "$count"
+    case $count in
+        "4") echo "bad luck from China";;
+        "9") echo "bad luck from Japan";;
+        "17") echo "bad luck from Italy";;
+    esac
+    (( count++ ))
+done
