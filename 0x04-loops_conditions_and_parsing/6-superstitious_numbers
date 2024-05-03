@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-# loops from 1 to 10 and displays :
-# "bad luck" in the 4th iteration
-# "good luck" in the 8th iteration
-# "best school" in the other iteration 
-
+# loops from 1 to 20 and displays :
+# "bad luck from China" in the 4th iteration
+# "bad luck from Japan" in the 9th iteration
+# "bad luck from Italy" in the 17th iteration
 count=0
 
 while [ $count -le 20 ]
