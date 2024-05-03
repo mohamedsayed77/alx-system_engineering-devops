@@ -4,7 +4,7 @@
 # "bad luck from Japan" in the 9th iteration
 # "bad luck from Italy" in the 17th iteration
 
-count=0
+count=1
 
 while [ $count -le 20 ]
 do
