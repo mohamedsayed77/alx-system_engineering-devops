@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# displays hours from 0 to 12 
+# displays mints from 1 to 59
+
+hours=0
+
+while [ $hours -le 12 ]
+do
+    echo "Hour: $hours"
+    mints=1
+    while [ $mints -le 59 ]
+    do
+        echo "$mints"
+        (( mints++))
+    done
+    (( hours++))
+done
