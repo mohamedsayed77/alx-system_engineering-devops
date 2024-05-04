@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this script extends previous exercise command and displays line containing the bash word
+
+./1-list_your_processes | grep "bash"
