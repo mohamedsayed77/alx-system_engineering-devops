@@ -2,4 +2,4 @@
 # this script displays the PID, along with process name of processes containing the word bash
 #cannot use ps
 
-pgrep -1 bash
+pgrep -l bash
