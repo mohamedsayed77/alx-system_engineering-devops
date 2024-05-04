@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # this script kills the infinity and beyond program using sigkill signal
 
-pkill -15 "bash ./4-infinity_and_beyond" -f
+pkill -15 "bash ./4-to_infinity_and_beyond" -f
