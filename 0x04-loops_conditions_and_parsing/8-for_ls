@@ -3,6 +3,7 @@
 # only displays the part of the name after the first dash
 
 list=$(1s)
+
 for i in $list; do
-        echo "$i" | cut -d '-' -f2
+    echo "$i" | cut -d '-' -f2
 done
