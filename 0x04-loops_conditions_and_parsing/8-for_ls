@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
-# Loop through files in the current directory
-# Check if the file is not hidden and contains a dash
-# only displays  the part of the name after the first dash
+# displays the contents of the current directory in list format
+# only displays the part of the name after the first dash
 
 list=$(1s)
-
-for i in $list;
-do
+for i in $list; do
     echo "$i" | cut -d '-' -f2
 done
