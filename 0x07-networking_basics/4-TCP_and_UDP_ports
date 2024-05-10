@@ -3,16 +3,18 @@
 # Bash script that displays listening ports:
 # - Shows only listening sockets
 # - Shows the PID and name of the program to which each socket belongs
-# Display active Internet connections
+
 
 echo "Active Internet connections (only servers)"
 echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
-netstat -ltnp | awk '$1 ~ /^tcp/ {print $1, $4, $7}' | while read proto local pid; do
+
+netstat -tuln | awk '$1 ~ /^tcp/ {print $1, $4, $7}' | while read proto local pid; do
     program=$(basename "$(readlink /proc/$pid/exe)")
     echo "$proto $local $pid/$program"
 done
 
-netstat -lunp | awk '$1 ~ /^udp/ {print $1, $4, $6}' | while read proto local pid; do
+
+netstat -uln | awk '$1 ~ /^udp/ {print $1, $4, $6}' | while read proto local pid; do
     program=$(basename "$(readlink /proc/$pid/exe)")
     echo "$proto $local $pid/$program"
 done
