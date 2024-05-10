@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
 
-# a bash scrip that pings an ip address passed as an argument
+# a bash script that pings an IP address passed as an argument
 # requirements:
-# accepts a string as an argument
-# Displays usage: Usage: 5-is_the_host_on_the_network {IP_ADDRESS}
-# if no argument passed
-# ping the ip 5 times.
+# - accepts a string as an argument
+# - Displays usage: Usage: 5-is_the_host_on_the_network {IP_ADDRESS} if no argument passed
+# - pings the IP 5 times if an argument is passed
 
-if [$# -eq 0]; then
-    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 {IP_ADDRESS}"
     exit
-elif [$# -gt 1];  then
-    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+elif [ $# -gt 1 ]; then
+    echo "Usage: $0 {IP_ADDRESS}"
     exit
 else
     ping "$1" -c 5
