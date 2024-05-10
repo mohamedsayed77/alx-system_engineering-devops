@@ -3,14 +3,15 @@
 # Bash script that pings an IP address passed as an argument
 # Requirements:
 # - Accepts a string as an argument
-# - Displays Usage: 5-is_the_host_on_the_network {IP_ADDRESS} if no argument passed
-# - Pings the IP 5 times
+# - Displays usage: Usage: 5-is_the_host_on_the_network {IP_ADDRESS} if no argument passed
+# - Ping the IP 5 times
 
-
-if [ $# -eq 0 ]; then
+if [ "$#" -eq 0 ]; then
     echo "Usage: $0 {IP_ADDRESS}"
     exit 1
+elif [ "$#" -gt 1 ]; then
+    echo "Usage: $0 {IP_ADDRESS}"
+    exit 1
+else
+    ping "$1" -c 5
 fi
-
-
-ping "$1" -c 5
