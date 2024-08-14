@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Module 0-subs
 This module defines a function to query the Reddit API and return the number of
